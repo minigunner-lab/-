@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volt Hub Loader</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>⚡ Volt Hub Loader ⚡</h1>
+        <p>Grab your script with one click.</p>
+        <div class="script-box">
+            <code id="script-text">loadstring(game:HttpGet("https://robloxhackers.pages.dev/loader"))()</code>
+        </div>
+        <button onclick="copyScript()">📋 Copy Script</button>
+    </div>
+
+    <script>
+        function copyScript() {
+            const scriptText = document.getElementById("script-text").innerText;
+            navigator.clipboard.writeText(scriptText).then(() => {
+                alert("✅ Script copied!");
+            }).catch(err => {
+                console.error("Failed to copy: ", err);
+            });
+        }
+    </script>
+</body>
+</html>
