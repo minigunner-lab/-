@@ -1,0 +1,5 @@
+if game.PlaceId == 5326405001 then
+  loadstring(game:HttpGet("https://robloxhackers.pages.dev/bsb"))()
+else
+  loadstring(game:HttpGet("https://robloxhackers.pages.dev/universal"))()
+end
