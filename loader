@@ -4,6 +4,8 @@ elseif game.PlaceId == 17625359962 then
   loadstring(game:HttpGet("https://robloxhackers.pages.dev/rivals"))()
 elseif game.PlaceId == 310798636 then
   loadstring(game:HttpGet("https://robloxhackers.pages.dev/SkiddedATNH"))()
+elseif game.PlaceId == 16732694052 then
+  loadstring(game:HttpGet("https://robloxhackers.pages.dev/fisch"))()
 else
   loadstring(game:HttpGet("https://robloxhackers.pages.dev/universal"))()
 end
