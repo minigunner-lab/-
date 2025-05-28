@@ -7,5 +7,5 @@ elseif game.PlaceId == 310798636 then
 elseif game.PlaceId == 16732694052 then
   loadstring(game:HttpGet("https://robloxhackers.pages.dev/fisch"))()
 else
-  loadstring(game:HttpGet("https://robloxhackers.pages.dev/universal"))()
+  loadstring(game:HttpGet("https://robloxhackers.pages.dev/universalhub"))()
 end
