@@ -6,7 +6,8 @@ local scripts = {
     [17625359962] = "rivals",
     [310798636] = "SkiddedATNH",
     [16732694052] = "fisch",
-    [292439477] = "pf"
+    [292439477] = "pf",
+    [4924922222] = "BrookhavenOpenSource"
 }
 
 local scriptPath = scripts[placeId] or "universalhub"
