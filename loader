@@ -8,6 +8,7 @@ local scripts = {
     [16732694052] = "fisch",
     [292439477] = "pf",
     [4924922222] = "BrookhavenOpenSource"
+    [286090429] = "ArsenalOpenSource"
 }
 
 local scriptPath = scripts[placeId] or "universalhub"
