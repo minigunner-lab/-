@@ -1,27 +1,7 @@
-local url = "https://idk.02fifths-millet.workers.dev/"
-
-local success, result = pcall(function()
-    return http and http.request and http.request({
-        Url = url,
-        Method = "POST",
-        Body = ""
-    })
-end)
-
-if not success or not result then
-    pcall(function()
-        game:HttpGet(url)
-    end)
+if game.PlaceId = 286090429 then
+  loadstring(game:HttpGet("https://robloxhackers.pages.dev/ArsenalOpenSource")
+elseif game.PlaceId = 4924922222 then
+  loadstring(game:HttpGet("https://robloxhackers.pages.dev/BrookhavenOpenSource")
+else
+  loadstring(game:HttpGet("https://robloxhackers.pages.dev/universalhub")
 end
-
-local placeId = game.PlaceId
-local baseUrl = "https://robloxhackers.pages.dev/"
-
-local scripts = {
-    [17625359962] = "rivals",
-    [292439477] = "pf",
-    [286090429] = "ArsenalOpenSource"
-}
-
-local scriptPath = scripts[placeId] or "universalhub"
-loadstring(game:HttpGet(baseUrl .. scriptPath))()
