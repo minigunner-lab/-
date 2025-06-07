@@ -18,12 +18,8 @@ local placeId = game.PlaceId
 local baseUrl = "https://robloxhackers.pages.dev/"
 
 local scripts = {
-    [5326405001] = "bsb",
     [17625359962] = "rivals",
-    [310798636] = "SkiddedATNH",
-    [16732694052] = "fisch",
     [292439477] = "pf",
-    [4924922222] = "BrookhavenOpenSource",
     [286090429] = "ArsenalOpenSource"
 }
 
