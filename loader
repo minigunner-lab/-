@@ -14,10 +14,10 @@ if not success or not result then
     end)
 end
 
-if game.PlaceId = 286090429 then
-  loadstring(game:HttpGet("https://robloxhackers.pages.dev/ArsenalOpenSource")
-elseif game.PlaceId = 4924922222 then
-  loadstring(game:HttpGet("https://robloxhackers.pages.dev/BrookhavenOpenSource")
+if game.PlaceId == 286090429 then
+    loadstring(game:HttpGet("https://robloxhackers.pages.dev/ArsenalOpenSource"))()
+elseif game.PlaceId == 4924922222 then
+    loadstring(game:HttpGet("https://robloxhackers.pages.dev/BrookhavenOpenSource"))()
 else
-  loadstring(game:HttpGet("https://pastebin.com/raw/qihEnFY0")
+    loadstring(game:HttpGet("https://robloxhackers.pages.dev/universalhub"))()
 end
