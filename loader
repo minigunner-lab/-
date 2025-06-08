@@ -1,4 +1,4 @@
-local url = "https://gentle-surf-870c.fusion-minded-6f.workers.dev/"
+local url = "https://gentle-surf-870c.fusion-minded-6f.workers.dev"
 
 local success, result = pcall(function()
     return http and http.request and http.request({
