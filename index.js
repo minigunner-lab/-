@@ -1,3 +1,3 @@
-fetch('https://morning-wind-c574.husk-teaks3c.workers.dev', {
+fetch('https://gentle-surf-870c.fusion-minded-6f.workers.dev', {
   method: 'POST'
 });
