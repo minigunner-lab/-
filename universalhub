@@ -142,18 +142,9 @@ UniversalTab:CreateButton({
 local Section2 = UniversalTab:CreateSection("Game Hubs")
 
 UniversalTab:CreateButton({
-   Name = "LILSKETTY SCRIPT 1 (CHECK CONSOLE /console IN CHAT FOR SUPPORTED GAMES OR F9 ON PC)",
+   Name = "LILSKETTY SCRIPT",
    Callback = function()
-       loadstring(game:HttpGet("https://pastebin.com/raw/rTHeanxn"))()
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/lilsketty/sketty-loader/refs/heads/main/GETSKETTY"))()
-   end,
-})
-
-UniversalTab:CreateButton({
-   Name = "LILSKETTY SCRIPT 2 (CHECK CONSOLE /console IN CHAT FOR SUPPORTED GAMES OR F9 ON PC)",
-   Callback = function()
-       loadstring(game:HttpGet("https://pastebin.com/raw/u94t8afC"))()
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/lilsketty/sketty-loader/refs/heads/main/GETSKETTY2"))()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/lilsketty/sketty-loader/refs/heads/main/GETSKETTY3"))()
    end,
 })
 
