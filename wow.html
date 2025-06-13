@@ -1,67 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>WOW</title>
-  <style>
-    body {
-      margin: 0;
-      background: #222;
-      color: #eee;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      overflow-x: hidden;
-      padding: 20px;
-    }
-    #wows {
-      font-weight: 900;
-      font-size: 2em;
-      color: #f5d742;
-      text-shadow: 1px 1px 3px #000;
-      user-select: none;
-      margin-bottom: 20px;
-      display: inline-block;
-    }
-    .textwow {
-      position: absolute;
-      font-size: 20px;
-      font-weight: 900;
-      color: #f5d742;
-      text-shadow: 1px 1px 3px #000;
-      pointer-events: auto;
-      cursor: pointer;
-      user-select: none;
-      animation: floatUp 3s ease forwards;
-    }
-    @keyframes floatUp {
-      0% {opacity: 1; transform: translateY(0);}
-      100% {opacity: 0; transform: translateY(-150px);}
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title> WOW</title>
+<style>
+  body {
+    height: 50000000000000000000000000000000000000000000000000000000000000000px;
+    background: #111;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  #wows {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 3em;
+    font-weight: 900;
+    color: #f5d742;
+    text-shadow: 2px 2px 5px #000;
+    user-select: none;
+    z-index: 9999;
+  }
+</style>
 </head>
 <body>
 
-  <div>WOW Counter: <span id="wows">0</span></div>
+<div>WOW Counter: <span id="wows">0</span></div>
 
 <script>
   const wowEl = document.querySelector("#wows");
-  let wows = 0;
+  let wowCount = 0;
+  let lastScroll = 0;
 
-  function injectWow() {
-    wows++;
-    wowEl.innerText = wows;
+  window.addEventListener('scroll', () => {
+    let currentScroll = window.scrollY;
 
-    const newWow = document.createElement("div");
-    newWow.className = "textwow";
-    newWow.innerText = "WOW";
-    newWow.style.left = 100 + Math.random() * (window.innerWidth - 200) + "px";
-    newWow.style.top = window.innerHeight - 100 + "px";
-    document.body.appendChild(newWow);
+    if(currentScroll > lastScroll){
+      let delta = currentScroll - lastScroll;
+      wowCount += Math.floor(delta / 5);
 
-    newWow.addEventListener("animationend", () => newWow.remove());
-  }
-
-  setInterval(injectWow, 500);
+      wowEl.innerText = wowCount;
+      lastScroll = currentScroll;
+    }
+  });
 </script>
 
 </body>
