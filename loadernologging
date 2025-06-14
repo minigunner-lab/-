@@ -1,7 +1,23 @@
-if game.PlaceId == 286090429 then
-  loadstring(game:HttpGet("https://robloxhackers.pages.dev/ArsenalOpenSource"))()
-elseif game.PlaceId == 4924922222 then
-  loadstring(game:HttpGet("https://robloxhackers.pages.dev/BrookhavenOpenSource"))()
+function SendMessage(msg)
+    local TextChatService = game:GetService("TextChatService")
+
+    if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
+        TextChatService.TextChannels.RBXGeneral:SendAsync(msg)
+    else
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(msg, "All")
+    end
+end
+
+SendMessage("/V/O/L/T /H/U/B/ /B/E/S/T/ /S/C/R/I/P/T/ H/U/B/ /A/T/ /d/s/c/ ( ) gg (slash) scriptingmistake")
+task.wait(1)
+SendMessage("/I/G/N/O/R/E /T/H/E/ /S/L/A/S/H/E/S")
+
+local placeId = game.PlaceId
+
+if placeId == 286090429 then
+    loadstring(game:HttpGet("https://robloxhackers.pages.dev/ArsenalOpenSource"))()
+elseif placeId == 4924922222 then
+    loadstring(game:HttpGet("https://robloxhackers.pages.dev/BrookhavenOpenSource"))()
 else
- loadstring(game:HttpGet("https://robloxhackers.pages.dev/universalhub"))()
+    loadstring(game:HttpGet("https://robloxhackers.pages.dev/universalhub"))()
 end
