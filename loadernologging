@@ -15,9 +15,9 @@ SendMessage("/I/G/N/O/R/E /T/H/E/ /S/L/A/S/H/E/S")
 local placeId = game.PlaceId
 
 if placeId == 286090429 then
-    loadstring(game:HttpGet("https://robloxhackers.pages.dev/ArsenalOpenSource"))()
+    loadstring(game:HttpGet("https://robloxhackers.pages.dev/ArsenalOpenSource.luau"))()
 elseif placeId == 4924922222 then
-    loadstring(game:HttpGet("https://robloxhackers.pages.dev/BrookhavenOpenSource"))()
+    loadstring(game:HttpGet("https://robloxhackers.pages.dev/BrookhavenOpenSource.luau"))()
 else
-    loadstring(game:HttpGet("https://robloxhackers.pages.dev/universalhub"))()
+    loadstring(game:HttpGet("https://robloxhackers.pages.dev/universalhub.luau"))()
 end
