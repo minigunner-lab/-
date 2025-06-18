@@ -139,6 +139,14 @@ UniversalTab:CreateButton({
    end,
 })
 
+UniversalTab:CreateButton({
+   Name = "Rizzler",
+   Callback = function()
+       loadstring(game:HttpGet("https://robloxhackers.pages.dev/Rizzler.lua"))()
+   end,
+})
+
+
 local Section2 = UniversalTab:CreateSection("Game Hubs")
 
 UniversalTab:CreateButton({
