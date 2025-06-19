@@ -77,6 +77,15 @@ UniversalTab:CreateButton({
 })
 
 UniversalTab:CreateButton({
+   Name = "Free Gamepass (Not Work All Games)",
+   Callback = function()
+   getgenv().Color = "default"
+   getgenv().TextColor = "default"
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/rndmq/Serverlist/refs/heads/main/Server87"))()
+   end,
+})
+
+UniversalTab:CreateButton({
    Name = "AnnaBypasser (Set Language To Kayak Tini In Account Info)",
    Callback = function()
        loadstring(game:HttpGet("https://raw.githubusercontent.com/AnnaRoblox/AnnaBypasser/refs/heads/main/AnnaBypasser.lua",true))()
