@@ -236,6 +236,14 @@ UniversalTab:CreateButton({
    end,
 })
 
+if game.PlaceId == 8253019142 then
+   UniversalTab:CreateButton({
+      Name = "Show Correct Glass",
+      Callback = function()
+          loadstring(game:HttpGet("https://paste.ee/d/B71IfoVq"))()
+      end,
+   })   
+end
 UniversalTab:CreateButton({
    Name = "My Friends Script Hub (XVC Hub)",
    Callback = function()
