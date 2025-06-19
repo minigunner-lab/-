@@ -8,7 +8,7 @@ function SendMessage(msg)
     end
 end
 
-SendMessage("/V/O/L/T /H/U/B/ /B/E/S/T/ /S/C/R/I/P/T/ H/U/B/ /A/T/ /d/s/c/ ( ) gg (s/l/a/s/h/) s!c!r!i!p!t!i!n!g!m!i!s!t!a!k!e!")
+SendMessage("/V/O/L/T /H/U/B/ /B/E/S/T/ /S/C/R/I/P/T/ H/U/B/ /A/T/ /d/s/c/ ( ) gg (s/l/a/s/h/) 8HH3TacCa6")
 task.wait(1)
 SendMessage("/I/G/N/O/R/E /T/H/E/ /S/L/A/S/H/E/S")
 
