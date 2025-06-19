@@ -232,7 +232,7 @@ UniversalTab:CreateButton({
 UniversalTab:CreateButton({
    Name = "Steal A Brainrot Anticheat Bypass",
    Callback = function()
-       loadstring(game:HttpGet("https://paste.ee/d/es59Vq8j/0"))()
+       loadstring(game:HttpGet("https://paste.ee/d/uyeJ6IDR/0"))()
    end,
 })
 
