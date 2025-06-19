@@ -330,11 +330,11 @@ local Tabs = {
     Main = Window:CreateTab("Main", 4483362458)
 }
 
-local Line = ""
-
 local RizzlerModule = Tabs.Main:CreateSection("Rizzler")
 
 Tabs.Main:CreateLabel(#Packages.Lines .. " lines are on your fingertips.")
+
+local Line = ""
 
 Tabs.Main:CreateDropdown({
     Name = "Select Line",
@@ -343,17 +343,23 @@ Tabs.Main:CreateDropdown({
     MultipleOptions = false,
     Flag = "Dropdown1",
     Callback = function(Option)
-        Line = Option
+        Line = Option[1]
+        print("Selected line:", Line)
     end
 })
 
 Tabs.Main:CreateButton({
     Name = "Say Line",
     Callback = function()
+        if typeof(Line) ~= "string" or Line == nil or Line == "Select a line here!" then
+            print("No valid line selected, skipping send")
+            return
+        end
+
         if Remote then
             Remote:FireServer(Line, "All")
         else
-            local TargetChannel = TextChatService.TextChannels:FindFirstChild("RBXGeneral") or TextChatService.TextChannels:WaitForChild("RBXGeneral")
+            local TargetChannel = TextChatService.TextChannels["RBXGeneral"]
             TargetChannel:SendAsync(Line)
         end
     end
@@ -366,7 +372,7 @@ Tabs.Main:CreateButton({
         if Remote then
             Remote:FireServer(RandomLine, "All")
         else
-            local TargetChannel = TextChatService.TextChannels:FindFirstChild("RBXGeneral") or TextChatService.TextChannels:WaitForChild("RBXGeneral")
+            local TargetChannel = TextChatService.TextChannels["RBXGeneral"]
             TargetChannel:SendAsync(RandomLine)
         end
     end
