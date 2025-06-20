@@ -37,8 +37,8 @@ function init_visuals(player)
 	local humanoid_root_part = character:WaitForChild("HumanoidRootPart")
 	local box_visual = Drawing.new("Square")
 	box_visual.Color = Color3.fromRGB(255, 255, 255)
-	box_visual.Thickness = 2
-	box_visual.Transparency = 1
+	box_visual.Thickness = 3
+	box_visual.Transparency = 0.8
 	box_visual.Filled = false
 	local tracer_visual = Drawing.new("Line")
 	tracer_visual.Color = Color3.fromRGB(255, 255, 255)
@@ -355,8 +355,6 @@ function update_fov_circle()
 	end
 end
 run_service.RenderStepped:Connect(update_fov_circle)
-
-    -- janky but works
 function string_to_enum(string)
 	local newstring = string:gsub("Enum.KeyCode.", "")
 	return Enum.KeyCode[newstring]
@@ -581,7 +579,7 @@ do
 		Title = "Smoothness",
 		Default = 0,
 		Min = 0,
-		Max = 10,
+		Max = 100,
 		Rounding = 1,
 		Callback = function(value)
 			aimbot_smoothness = value
@@ -595,7 +593,7 @@ do
 		Title = "Prediction Strength X",
 		Default = 0,
 		Min = 0,
-		Max = 1,
+		Max = 3,
 		Rounding = 2,
 		Callback = function(value)
 			aimbot_prediction_strength_x = value
@@ -609,7 +607,7 @@ do
 		Title = "Prediction Strength Y",
 		Default = 0,
 		Min = 0,
-		Max = 1,
+		Max = 3,
 		Rounding = 2,
 		Callback = function(value)
 			aimbot_prediction_strength_y = value
@@ -778,7 +776,7 @@ do
 		Title = "Walkspeed",
 		Default = 0,
 		Min = 0,
-		Max = 0.7,
+		Max = 1,
 		Rounding = 1,
 		Callback = function(value)
 			speed_multiplier = value
