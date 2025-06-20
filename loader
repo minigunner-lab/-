@@ -18,6 +18,8 @@ if placeId == 286090429 then
     loadstring(game:HttpGet("https://robloxhackers.pages.dev/ArsenalOpenSource.luau"))()
 elseif placeId == 4924922222 then
     loadstring(game:HttpGet("https://robloxhackers.pages.dev/BrookhavenOpenSource.luau"))()
+elseif placeId == 17625359962 then
+    loadstring(game:HttpGet("https://robloxhackers.pages.dev/Rivals.luau"))()
 else
     loadstring(game:HttpGet("https://robloxhackers.pages.dev/universalhub.luau"))()
 end
