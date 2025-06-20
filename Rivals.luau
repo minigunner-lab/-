@@ -567,7 +567,7 @@ do
 		Title = "FOV Size",
 		Default = 50,
 		Min = 0,
-		Max = 100,
+		Max = 300,
 		Rounding = 0,
 		Callback = function(value)
 			aimbot_fov_size = value
