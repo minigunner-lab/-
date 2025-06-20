@@ -1,6 +1,8 @@
-function SendMessage(msg)
-    local TextChatService = game:GetService("TextChatService")
+local StarterGui = game:GetService("StarterGui")
+local TextChatService = game:GetService("TextChatService")
+local Players = game:GetService("Players")
 
+local function SendMessage(msg)
     if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
         TextChatService.TextChannels.RBXGeneral:SendAsync(msg)
     else
@@ -8,18 +10,28 @@ function SendMessage(msg)
     end
 end
 
-SendMessage("/V/O/L/T /H/U/B/ /B/E/S/T/ /S/C/R/I/P/T/ H/U/B/ /A/T/ /d/s/c/ ( ) gg (s/l/a/s/h/) 8HH3TacCa6")
-task.wait(1)
-SendMessage("/I/G/N/O/R/E /T/H/E/ /S/L/A/S/H/E/S")
-
-local placeId = game.PlaceId
-
-if placeId == 286090429 then
-    loadstring(game:HttpGet("https://robloxhackers.pages.dev/ArsenalOpenSource.luau"))()
-elseif placeId == 4924922222 then
-    loadstring(game:HttpGet("https://robloxhackers.pages.dev/BrookhavenOpenSource.luau"))()
-elseif placeId == 17625359962 then
-    loadstring(game:HttpGet("https://robloxhackers.pages.dev/Rivals.luau"))()
-else
-    loadstring(game:HttpGet("https://robloxhackers.pages.dev/universalhub.luau"))()
+local bf = Instance.new("BindableFunction")
+bf.OnInvoke = function(choice)
+    if choice == "Yes" then
+        SendMessage("/V/O/L/T /H/U/B/ /B/E/S/T/ /S/C/R/I/P/T/ H/U/B/ /A/T/ /d/s/c/ ( ) gg (s/l/a/s/h/) 8HH3TacCa6")
+    end
+    local placeId = game.PlaceId
+    if placeId == 286090429 then
+        loadstring(game:HttpGet("https://robloxhackers.pages.dev/ArsenalOpenSource.luau"))()
+    elseif placeId == 4924922222 then
+        loadstring(game:HttpGet("https://robloxhackers.pages.dev/BrookhavenOpenSource.luau"))()
+    elseif placeId == 17625359962 then
+        loadstring(game:HttpGet("https://robloxhackers.pages.dev/Rivals.luau"))()
+    else
+        loadstring(game:HttpGet("https://robloxhackers.pages.dev/universalhub.luau"))()
+    end
 end
+
+StarterGui:SetCore("SendNotification", {
+    Title = "VOLT HUB",
+    Text = "Wanna promote this script to chat?",
+    Duration = 10,
+    Button1 = "Yes",
+    Button2 = "No",
+    Callback = bf
+})
