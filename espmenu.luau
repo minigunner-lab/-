@@ -372,4 +372,3 @@ local weaponOutlinedToggle = Tab:CreateToggle({
 })
  
 Sense.Load()
-Rayfield:LoadConfiguration()
